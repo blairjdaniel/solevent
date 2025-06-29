@@ -1,0 +1,285 @@
+/* Need to change colors? Do it here, these are the main colors that are used all over the website. */
+/* Backgrounds can be any CSS background style. Don't need to be background-colors. */
+:root {
+    --color-primary: #123456;
+    --color-secondary: #abcdef;
+    --color-accent: #ff9900;
+    --color-background: #f5f5f5;
+    --color-text: #222222;
+    --white: #fff;
+    --black: #000;
+    --darkgrey: #1C203D;
+    --grey: #f9fcff;
+    --grey-trans: #ccc3;
+    --lightblue: #71919F;
+    --greenblue: #2B5565;
+    --blue: #3E448E;
+    --lightpink: #A7A2E6;
+    --pink: #DB6596;
+    --orange: #DB6506;
+    --lightyellow: #EED1A9;
+    --yellow: #DED109;
+    /* Generated colours */
+    --cal-poly-green: #264e36ff;
+    --forest-green: #4c9a2aff;
+    --cocoa-brown: #d96c06ff;
+    --crimson: #d72638ff;
+    --neon-blue: #4361eeff;
+    --primary: #4E44CE;
+    --night: #171614ff;
+    --bistre: #3a2618ff;
+    --black-olive: #37423dff;
+    --french-rose: #ff4785ff;
+    --mustard: #ffd54fff;
+    /*original file colours*/
+    --error: #D92D20;
+    --accent-color: #800080;
+    --accent-color-trans: #80008033;
+    --page-background: #300030;
+    --page-fg-color: var(--white);
+    --main-bg: #0E0E0E;
+    --alt-bg: #202020;
+    --selection-fg: var(--black);
+    --selection-bg: var(--white);
+    --svg-opacity-hover: 1;
+    --wallet-btn-color: var(--white);
+    --wallet-btn-bg: var(--accent-color);
+    --wallet-btn-opacity: .9;
+    --wallet-btn-color-hover: #50103c;
+    --wallet-btn-bg-hover: var(--lightpink);
+    --wallet-btn-hover-opacity: 1;
+    --wallet-list-btn-color: var(--white);
+    --wallet-list-btn-bg: none;
+    --wallet-list-btn-color-hover: var(--white);
+    /*    --wallet-list-btn-bg-hover: linear-gradient(60deg, transparent, #5555 25%, #5555 45%, #30303000 66%); /* Aero theme */
+    --wallet-list-btn-bg-hover: var(--primary);
+    --wallet-list-btn-hover-border-color: transparent;
+    --wallet-list-btn-border-width: 2px;
+    --wallet-list-btn-border-radius: 0px;
+    --wallet-dropdown-list-bg: var(--alt-bg);
+    --wallet-dropdown-list-item-color: none;
+    --wallet-dropdown-list-item-bg: transparent;
+    --wallet-dropdown-list-item-hover-color: var(--black); /* Aero theme */
+    --wallet-dropdown-list-item-hover-bg: var(--wallet-btn-bg-hover); /* Aero theme */
+    /*    --wallet-dropdown-list-item-hover-color: var(--white); /* Dark theme */
+    /*    --wallet-dropdown-list-item-hover-bg: var(--black); /* Dark theme */
+    /*    --wallet-dropdown-list-item-hover-bg: var(--blue); /* Ocean theme */
+    --arrow-button-wrap-hover-background: transparent;
+    --arrow-button-color: #000c;
+    --arrow-button-size: 8px;
+    --arrow-button-thickness: 3px;
+    --arrow-button-margin: 30px;
+    --image-url: url(../public/img.jpg);
+    /* my ISP was blocking IPFS
+        --image-url: url(https://bafybeidt3npna22eu2h7kewf6je7igtkddbdpdu4w737rhdfhy2rsmx5ze.ipfs.w3s.link/vy3stib90QUIZFoPhxGJ--2--2v1v3_2x.jpg);
+   */
+}
+
+/* --< text selection >-- */
+*::selection,
+a::selection,
+button::selection, input::selection {
+    background-color: var(--selection-bg);
+    color: var(--selection-fg);
+}
+
+body {
+    /* background-image: url('../public/bb_main_title.png'); */
+    
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background: var(--cal-poly-green);*/
+    color: var(--page-fg-color);
+    font-family: 'Plus Jakarta Sans', 'Calibri', sans-serif;
+    font-size: 1rem;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+h2, h3, h4, h5, h6 {
+    cursor: default;
+}
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.w-100 {
+    width: 100%;
+}
+
+/* NFT image container div */
+.image-wrap {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+.image-wrap > div,
+.image-wrap > div > div {
+    position: relative !important;
+    height: 100% !important;
+    width: 100% !important;
+    border-radius: 16px;
+}
+
+.image-wrap .rsis-container ~ button {
+    margin: 0 !important;
+    top: 0 !important;
+    padding: 0px !important;
+    width: calc(var(--arrow-button-margin) * 2) !important;
+    height: 100% !important;
+/*    filter: invert(95%) sepia(90%) saturate(2287%) hue-rotate(395deg) brightness(187%) contrast(60%) opacity(70%); /* omly if you're using the slider's default img element (which sucks) */
+}
+
+.image-wrap .rsis-container ~ button:first-of-type {
+    left: 0 !important;
+}
+
+.image-wrap .rsis-container ~ button:last-of-type {
+    right: 0 !important;
+}
+
+/* slider arrow button */
+.image-wrap .rsis-container ~ button:hover {
+    background: var(--arrow-button-wrap-hover-background) !important;
+}
+
+/* hide hideous img element */
+.image-wrap button img {
+    display: none !important;
+}
+
+/* replace it with css */
+.image-wrap button:before {
+    content: '';
+    display: inline-block;
+    border: solid var(--arrow-button-color);
+    border-width: 0 var(--arrow-button-thickness) var(--arrow-button-thickness) 0;
+    padding: var(--arrow-button-size);
+}
+
+/* left */
+.image-wrap button:first-of-type:before {
+    position: relative;
+    left: calc(var(--arrow-button-size)/2);
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+/* right */
+.image-wrap button:last-of-type:before {
+    position: relative;
+    right: calc(var(--arrow-button-size)/2);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+a > svg {
+    /*
+    border-radius: 30%;
+    transition: box-shadow .2s;
+   */
+}
+
+a:hover > svg {
+    /*
+    background: var(--accent-color-trans);
+    box-shadow: 0 0 10px 3px var(--accent-color-trans);
+   */
+    opacity: var(--svg-opacity-hover);
+}
+
+/* Modal that opens when the 'Connect Wallet' button is clicked styling */
+.wallet-adapter-modal-wrapper {
+    background: var(--alt-bg) !important;
+}
+.wallet-adapter-modal-title {
+    color: var(--white) !important;
+}
+
+/* Connect Wallet button */
+:not(li) > .wallet-adapter-button {
+    background: var(--wallet-btn-bg);
+    color: var(--wallet-btn-color);
+    transition: background .2s, color .2s, opacity .2s;
+}
+:not(li) > .wallet-adapter-button:hover {
+    color: var(--wallet-btn-color-hover);
+}
+
+/* Top one */
+:not(.wallet-adapter-modal-wrapper) > ul:first-of-type .wallet-adapter-button {
+    opacity: var(--wallet-btn-opacity);
+}
+:not(.wallet-adapter-modal-wrapper) > ul:first-of-type .wallet-adapter-button:hover {
+    background: var(--wallet-btn-bg-hover) !important;
+    opacity: var(--wallet-btn-hover-opacity);
+}
+
+/* Wallet list entries */
+li > .wallet-adapter-button {
+    border: var(--wallet-list-btn-border-width) solid transparent !important;
+    border-radius: var(--wallet-list-btn-border-radius) !important;
+    background: var(--wallet-list-btn-bg) !important;
+    color: var(--wallet-list-btn-color) !important;
+    opacity: 1 !important;
+    transition: background .1s, opacity .1s !important;
+}
+li > .wallet-adapter-button:hover {
+    border-color: var(--wallet-list-btn-hover-border-color) !important;
+    background: var(--wallet-list-btn-bg-hover) !important;
+    color: var(--wallet-list-btn-color-hover) !important;
+    opacity: .9 !important;
+}
+.wallet-adapter-modal-list {
+    margin: 0 0 4px !important;
+}
+.wallet-adapter-dropdown-list {
+    background: var(--wallet-dropdown-list-bg) !important;
+}
+
+.wallet-adapter-dropdown-list-item {
+    background: var(--wallet-dropdown-list-item-bg) !important;
+    color: var(--wallet-dropdown-list-item-color) !important;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    min-width: 8vw;
+    transition: color .2s, background .2s, opacity .4s;
+}
+
+.wallet-adapter-dropdown-list-item:not([disabled]):hover {
+    background: var(--wallet-dropdown-list-item-hover-bg) !important;
+    color: var(--wallet-dropdown-list-item-hover-color) !important;
+    opacity: .9;
+}
+.nft-image {
+  width: 75px;
+  height: 75px;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  margin-bottom: 0.5rem;
+  object-fit: cover;
+}
+@media (min-width: 640px) {
+  .nft-image {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (min-width: 768px) {
+  .nft-image {
+    width: 140px;
+    height: 140px;
+  }
+}

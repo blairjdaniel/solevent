@@ -1,0 +1,72 @@
+{
+  "name": "keyturn-dapp",
+  "version": "1.0.0",
+  "description": "A modern, out-of-the-box Solana Candy Machine minting dApp for KeyTurn",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "check-env": "node scripts/check-env-vars.js",
+    "setup": "node scripts/setup-env.js",
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf .next out",
+    "help": "echo 'Available commands: npm run dev, npm run build, npm run start, npm run lint, npm run check-env, npm run setup, npm run type-check, npm run clean'"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@fontsource/noto-sans": "^5.2.7",
+    "@fontsource/plus-jakarta-sans": "^5.2.6",
+    "@metaplex-foundation/mpl-candy-machine": "^6.1.0",
+    "@metaplex-foundation/mpl-core": "^1.4.0",
+    "@metaplex-foundation/mpl-token-metadata": "^3.1.3",
+    "@metaplex-foundation/umi": "^1.2.0",
+    "@metaplex-foundation/umi-bundle-defaults": "^1.2.0",
+    "@metaplex-foundation/umi-signer-wallet-adapters": "^1.2.0",
+    "@metaplex-foundation/umi-web3js-adapters": "^1.2.0",
+    "@solana/wallet-adapter-base": "^0.9.27",
+    "@solana/wallet-adapter-phantom": "^0.09.28",
+    "@solana/wallet-adapter-react": "^0.15.39",
+    "@solana/wallet-adapter-react-ui": "^0.9.39",
+    "@solana/wallet-adapter-wallets": "^0.19.32",
+    "@solana/web3.js": "^1.98.2",
+    "bs58": "^6.0.0",
+    "canvas-confetti": "^1.9.3",
+    "dotenv": "^16.5.0",
+    "next": "^15.3.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "styled-components": "^6.1.19"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.1",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "eslint": "9.29.0",
+    "eslint-config-next": "15.3.3",
+    "typescript": "5.8.3"
+  },
+  "keywords": [
+    "solana",
+    "nft",
+    "candy-machine",
+    "metaplex",
+    "react",
+    "nextjs",
+    "blockchain",
+    "keyturn"
+  ],
+  "author": "KeyTurn Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/keyturn-dapp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/keyturn-dapp/issues"
+  },
+  "homepage": "https://github.com/your-username/keyturn-dapp#readme"
+}
